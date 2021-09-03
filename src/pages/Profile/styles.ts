@@ -45,6 +45,11 @@ export const Repos = styled.div`
             grid-gap: 16px;
 
             grid-template-columns: 1rf;
+
+            @media (min-width: 768px){
+                grid-template-columns: 1rf 1rf;
+                grid-auto-rows: minmax(min-content, max-content);
+            }
         }
 
 

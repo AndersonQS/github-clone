@@ -58,9 +58,26 @@ export const Botside = styled.div `
 
             > span {
                 margin-left: 5px;
+                font-size: 12px;
+                color: var(--gray);
             }
         }
+    }
+    .language {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        flex-shrink: 0;
 
+        &.other {
+            background: var(--other-language);
+        }
+        &.javascript {
+            background: var(--javascript);
+        }
+        &.typescript{
+            background: var(--other-language);
+        }
     }
 `;
 
