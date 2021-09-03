@@ -1,14 +1,15 @@
 import React from 'react';
 
-import { Container, Main, LeftSide, RigthSide } from './styles';
+import { Container, Main, LeftSide, RigthSide, Repos } from './styles';
 
 import ProfileData from '../../components/ProfileData';
+import RepoCard from '../../components/RepoCard';
 
 const Profile: React.FC = () => {
   return (
     <Container>
       <Main>
-        <LeftSide></LeftSide>
+        <LeftSide>
           <ProfileData
           username={'AndersonQS'}
           name = {'Anderson Queiroz'}
@@ -21,7 +22,26 @@ const Profile: React.FC = () => {
           blog = {'linkedin.com/in/'}
 
           />
-        <RigthSide></RigthSide>
+          </LeftSide>
+
+        <RigthSide>
+          <Repos>
+            <h2>Random repos</h2>
+            <div>
+              {[1,2,3,4,5,6,].map(n => (
+                <RepoCard 
+                key = {n}
+                username = {'AndersonQS'}
+                reponame = {'github-clone'}
+                description = {'colone do git hub'}
+                language = {n % 3 === 0 ? 'JavaScript' : 'TypeScript'}
+                stars = {2}
+                forks = {4}
+                />
+              ) )}
+            </div>
+          </Repos>
+        </RigthSide>
 
       </Main>
     </Container>
