@@ -1,19 +1,34 @@
 import React from 'react';
 
-import { Container, Main, LeftSide, RigthSide, Repos, CalendarHeading } from './styles';
+import { Container, Main, LeftSide, RightSide, Repos, CalendarHeading,RepoIcon, Tab} from './styles';
 
 import ProfileData from '../../components/ProfileData';
 import RepoCard from '../../components/RepoCard';
 import RandomCalendar from '../../components/RandomCalendar';
 
 const Profile: React.FC = () => {
+
+  const TabContent  = () => (
+    <div className="content">
+      <RepoIcon />
+      <span className="label">Repositories</span>
+      <span className="number">11</span>
+    </div>
+  )
   return (
     <Container>
+
+      <Tab className = "desktop">
+        <TabContent />
+
+        <span className="liine" />
+
+      </Tab>
       <Main>
         <LeftSide>
           <ProfileData
           username={'AndersonQS'}
-          name = {'Anderson Queiroz'}
+          name = {'Anderson Queiroz da Silva'}
           avatarUrl = {'https://avatars.githubusercontent.com/u/21376261?v=4'}
           followers = {5}
           following = {7}
@@ -25,7 +40,11 @@ const Profile: React.FC = () => {
           />
           </LeftSide>
 
-        <RigthSide>
+        <RightSide>
+          <Tab className = "mobile">
+            <TabContent />
+            <span className="line"></span>
+          </Tab>
           <Repos>
             <h2>Random repos</h2>
             <div>
@@ -48,7 +67,7 @@ const Profile: React.FC = () => {
           </CalendarHeading>
 
           <RandomCalendar />
-        </RigthSide>
+        </RightSide>
 
       </Main>
     </Container>
