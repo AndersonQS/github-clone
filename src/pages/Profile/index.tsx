@@ -19,8 +19,10 @@ const Profile: React.FC = () => {
     <Container>
 
       <Tab className = "desktop">
+        <div className="wrapper">
+          <span className="offset"></span>
         <TabContent />
-
+        </div>
         <span className="liine" />
 
       </Tab>
