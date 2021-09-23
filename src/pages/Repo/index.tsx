@@ -1,20 +1,20 @@
 import React from 'react';
 
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { Container, Breadcrumb, RepoIcon, Stats, StarIcon, ForkIcon, LinkButton, GithubIcon } from './styles';
 
 const Repo: React.FC = () => {
   return (
     <Container>
-      <Breadcrumb   >
+      <Breadcrumb>
         <RepoIcon />
         
-        <Link className= {'username'} to = {'/AdnersonQS'}>
+        <Link className= {'username'} to = {'/AndersonQS'}>
           AndersonQS
       </Link>
-      <span></span>
-      <Link className= {'reponame'} to = {'/AdnersonQS/github-clone'}>
+      <span>/</span>
+      <Link className= {'reponame'} to = {'/AndersonQS/github-clone'}>
           github-clone
       </Link>
       </Breadcrumb>
@@ -34,9 +34,10 @@ const Repo: React.FC = () => {
         </li>
       </Stats>
 
-      <LinkButton href = {'https://github.com/AndersonQS/github-clone'}></LinkButton>
+      <LinkButton href = {'https://github.com/AndersonQS/github-clone'}>
       <GithubIcon />
       <span>View on Github </span>
+      </LinkButton>
     </Container>
   );
 }
