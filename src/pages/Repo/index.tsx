@@ -30,7 +30,7 @@ const Repo: React.FC = () => {
         <li>
           <ForkIcon />
           <b>0</b>
-          <span>forks</span>
+          <span>forks 5</span>
         </li>
       </Stats>
 
