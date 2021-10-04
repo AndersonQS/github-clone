@@ -25,7 +25,7 @@ interface Data {
 }
 
 const Profile: React.FC = () => {
-  const { username = 'guilhermerodz' } = useParams();
+  const { username = 'AndersonQS' } = useParams();
   const [data, setData] = useState<Data>();
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const Profile: React.FC = () => {
       const repos = await reposResponse.json();
 
       const shuffledRepos = repos.sort(() => 0.5 - Math.random());
-      const slicedRepos = shuffledRepos.slice(0, 6); // 6 repos
+      const slicedRepos = shuffledRepos.slice(0, 6);
 
       setData({
         user,

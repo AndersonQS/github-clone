@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import GlobalStyles from './styles/GlobalStyles';
 import Header from './components/Header';
@@ -14,12 +14,12 @@ function App() {
     <BrowserRouter>
       <Header />
       
-      <Routes>
+      <Switch>
         <Route path="/" element={<Profile />} />
         <Route path="/:username" element={< Profile />} />
         <Route path="/:username/:reponame" element={< Repo />} />
-      </Routes>
-       < Footer />
+      </Switch>
+       <Footer />
       <GlobalStyles />
     </BrowserRouter>
 

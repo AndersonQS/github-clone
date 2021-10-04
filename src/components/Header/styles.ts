@@ -17,12 +17,12 @@ export const GithubLogo = styled(FaGithub)`
 
 `;
 
-export const SearchForm = styled.div`
+export const SearchForm = styled.form`
 padding-left: 16px;
 width: 100%;
 
 input{
-    background: var(--search-placeholder);
+    background: var(--search);
     outline: 0;
     border-radius: 6px;
     padding: 11px 12px;

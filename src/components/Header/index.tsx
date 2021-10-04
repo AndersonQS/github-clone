@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router';
+import  {useNavigate} from 'react-router-dom';
 
 import { Container, GithubLogo, SearchForm } from './styles';
 
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
         <input
           placeholder="Enter Username or Repo..."
           value={search}
-          onChange={(e) => setSearch(e.currentTarget.value)}
+          onChange={ (e) => setSearch(e.currentTarget.value)}
         />
       </SearchForm>
     </Container>
